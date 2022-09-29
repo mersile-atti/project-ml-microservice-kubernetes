@@ -1,1 +1,9 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) Administrator91@:~/environment/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
+Error from server (AlreadyExists): pods "my-ml-project" already exists
+NAME                                 READY   STATUS    RESTARTS   AGE
+my-ml-project                        1/1     Running   0          54m
+python-helloworld-84857d9565-lgdqn   1/1     Running   0          70m
+udacityproject-5ff696d9d5-btq4v      1/1     Running   0          69m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000

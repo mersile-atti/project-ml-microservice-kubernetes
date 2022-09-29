@@ -6,10 +6,15 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+dockerpath="mersileatti/my-ml-project:latest"
+
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login &&\
+    docker image tag my-ml-project $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
