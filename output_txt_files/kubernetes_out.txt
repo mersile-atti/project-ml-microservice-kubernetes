@@ -1,9 +1,27 @@
 (.devops) Administrator91@:~/environment/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
 Error from server (AlreadyExists): pods "my-ml-project" already exists
-NAME                                 READY   STATUS    RESTARTS   AGE
-my-ml-project                        1/1     Running   0          54m
-python-helloworld-84857d9565-lgdqn   1/1     Running   0          70m
-udacityproject-5ff696d9d5-btq4v      1/1     Running   0          69m
+NAME                              READY   STATUS    RESTARTS   AGE
+my-ml-project                     1/1     Running   0          9m1s
+udacityproject-5ff696d9d5-7h854   1/1     Running   0          5m26s
 Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
+
+(.devops) Administrator91@:~/environment/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+[2022-09-29 22:29:45,578] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-09-29 22:29:45,592] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-09-29 22:29:45,602] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-09-29 22:29:45,606] INFO in app: output prediction: [20.35373177134412]
+127.0.0.1 - - [29/Sep/2022 22:29:45] "POST /predict HTTP/1.1" 200 -

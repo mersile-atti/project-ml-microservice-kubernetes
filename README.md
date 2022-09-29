@@ -1,13 +1,19 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/mersile-atti/project-ml-microservice-kubernetes/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mersile-atti/project-ml-microservice-kubernetes/tree/master)
 
-## Repository Overview
+## Project Overview
 
-This repository contains code to containerize a machine learning, Python application; it uses a pre-trained `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). 
+Prediction-app is a Python flask application that use `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing).
 
-`app.py` serves out predictions about housing prices through API calls. This code could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+### Project goal
 
-Instructions for running the app using Docker or Kubernetes can be found below.
+Operationalize machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications.
 
+### Project features
+
+* Circleci for CI/CD
+* Build and run a docker image of prediction-app 
+* Upload prediction-app container to docker hub
+* Deploy the container using Kubernetes and make a prediction
 ---
 
 ## Clone project
